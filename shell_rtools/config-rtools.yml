@@ -1,0 +1,47 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+- container_path: /opt/fsl
+  host_path: /nfs/rwork/software/soft_ubuntu/fsl
+  propagation: rprivate
+  read_only: false
+debug: false
+description: kmilo-rtools-demo1
+entrypoint: null
+environment:
+  add_capabilities: null
+  drop_capabilities: null
+  environment_variables: 
+    - RESOLUTION=1920x1080
+    - SLACK_URL=https://hooks.slack.com/services/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
+# You have to open the browser using the same password
+# http://localhost:6080/vnc.html?password=demo1234&autoconnect=true&resize=remote
+# If you don't set the env variable the the default password is matlab
+    - DEFAULT_VNC_PASSWORD=demo1234
+  force_pull_image: false
+  image:
+    cpu: harbor.vhio.net/determine/srtools:0.24.0
+    cuda: harbor.vhio.net/determine/srtools:0.24.0
+    rocm: determinedai/environments:rocm-5.0-pytorch-1.10-tf-2.7-rocm-0.24.0
+  pod_spec: null
+  ports: null
+  proxy_ports:
+    - proxy_port: 5901
+      proxy_tcp: true
+      unauthenticated: true
+    - proxy_port: 6080
+      proxy_tcp: true
+      unauthenticated: true
+idle_timeout: null
+notebook_idle_type: kernels_or_terminals
+pbs: {}
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  resource_pool: default-i7cpu
+  slots: 1
+  weight: 1
+slurm: {}
+work_dir: null

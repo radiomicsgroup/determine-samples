@@ -1,0 +1,30 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+debug: false
+description: kmilo-cmd-demo1
+entrypoint: null
+environment:
+  add_capabilities: null
+  drop_capabilities: null
+  force_pull_image: false
+  image:
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.2
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.2
+    rocm: determinedai/environments:rocm-5.0-pytorch-1.10-tf-2.7-rocm-0.24.0
+  pod_spec: null
+  ports: null
+  proxy_ports: null
+idle_timeout: null
+notebook_idle_type: kernels_or_terminals
+pbs: {}
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  resource_pool: default-i7cpu
+  slots: 1
+  weight: 1
+slurm: {}
+work_dir: null

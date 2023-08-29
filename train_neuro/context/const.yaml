@@ -1,0 +1,39 @@
+name: train_neuro
+description: Train Neuro model.
+labels:
+  - demo
+  - train-neuro
+data:
+  trainpath: /nfs/rnas/kmilo/neuro/Testing/
+  testpath: /nfs/rnas/kmilo/neuro/Training/
+  unique_labels: 4
+workspace: demo-testing
+project: neuro-demo
+hyperparameters:
+  image_zise: 128
+  learning_rate: 0.0001
+  global_batch_size: 20
+  dropout1: 0.25
+  dropout2: 0.5
+records_per_epoch: 100
+searcher:
+  name: single
+  metric: val_accuracy
+  max_length:
+      batches: 950 
+  smaller_is_better: false
+#entrypoint:  python3 -m determined.launch.horovod --autohorovod --trial model_def:NeuroTrial
+entrypoint: model_def:NeuroTrial
+bind_mounts:
+- container_path: /nfs/
+  host_path: /nfs/
+  propagation: rprivate
+  read_only: false
+environment:
+  force_pull_image: false
+  image:
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.2
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.2
+resources:
+  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  resource_pool: amd-rtx4090-gpu

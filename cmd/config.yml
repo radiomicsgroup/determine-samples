@@ -1,0 +1,32 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+debug: false
+description: kmilo-cmd-demo1
+entrypoint: null
+environment:
+  add_capabilities: null
+  drop_capabilities: null
+  environment_variables: 
+    - SLACK_URL=https://hooks.slack.com/services/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
+  force_pull_image: false
+  image:
+    cpu: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-0.24.0
+    cuda: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.24.0
+    rocm: determinedai/environments:rocm-5.0-pytorch-1.10-tf-2.7-rocm-0.24.0
+  pod_spec: null
+  ports: null
+  proxy_ports: null
+idle_timeout: null
+notebook_idle_type: kernels_or_terminals
+pbs: {}
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  resource_pool: default-i7cpu
+  slots: 1
+  weight: 1
+slurm: {}
+work_dir: null

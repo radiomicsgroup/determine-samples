@@ -51,3 +51,40 @@ You must see something like  `det 0.24.0`
 - train_neuro
 
     Custom example using a example code from kaggle
+
+## :alembic: Some commands examples
+
+```
+# list users
+$:- det user
+
+# login first
+$:- det user login USER
+
+# change password of current user
+$:- det user change-password
+
+# create a user name USER
+$:- det user create USER
+
+# change password of USER
+$:- det user change-password USER
+
+# re-atach to shell
+$:- det shell open ID-TASK 
+
+# list Agents
+$:- det agent ls
+
+# to view a snapshot of logs.
+$:- det cmd logs <UUID> 
+
+# to view the current logs and continue streaming future output.
+$:- det cmd logs -f <UUID> 
+
+# to stop the command.
+$:- det cmd kill <UUID> 
+
+# Get experiments logs
+$:- det trial logs -f <UUID> 
+```

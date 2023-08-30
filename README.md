@@ -44,6 +44,14 @@ You must see something like  `det 0.24.0`
 
     Open a shell
 
+- shell_custom
+
+    Open a shell using the custom image.
+
+- shell_custom_home_conda
+
+    Open a shell using the conda enviroment from /nfs/home/clbente
+    
 - shell_rtools
 
     Open a rtools and open the url locally using a browser.

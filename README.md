@@ -52,6 +52,22 @@ You must see something like  `det 0.24.0`
 
     Custom example using a example code from kaggle
 
+## :dart: Some helpfull agent enviroment variables
+
+- DET_ALLOCATION_ID=b54f9618-591e-4700-b119-e1e508f11dce.1
+
+    Agent Task ID.
+
+- DET_AGENT_ID=Agent_i7_CPU_172.27.1.63_04
+
+    Agent Id, in this case when a agent is setup the ID contains the IP address of the machine.
+
+- DET_USER=demo
+
+    Determined user runing the task.
+
+** You can check all the enviroment variables running the command `printenv`
+
 ## :alembic: Some commands examples
 
 ```

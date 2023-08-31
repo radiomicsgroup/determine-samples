@@ -59,9 +59,19 @@ pip install --upgrade determined
 
     Open a shell using the conda enviroment from /nfs/home/clbente.
 
+- shell_custom_template
+
+    Open a shell using a template.
+    
 - shell_home_conda
 
     Open a shell using the conda enviroment from /nfs/home/clbente but using the determined docker image.
+
+- shell_home_conda_template
+
+    Open a shell using the conda enviroment from /nfs/home/clbente but using the determined docker image. 
+    Using a template.
+
 - shell_rtools
 
     Open a rtools and open the url locally using a browser.
@@ -85,6 +95,10 @@ pip install --upgrade determined
     Determined user runing the task.
 
 ** You can check all the enviroment variables running the command `printenv`
+
+## :memo: Templates
+
+You can check some basic templates.
 
 ## :alembic: Some commands examples
 
@@ -145,6 +159,10 @@ $:- det trial logs -f <UUID>
    
    Custom Images
  - harbor.vhio.net/determine/srtools:0.24.0
+ 
  - harbor.vhio.net/determine/custom_cpu:0.24.0.2
+ - harbor.vhio.net/determine/custom_cpu:0.24.0.3
+ 
  - harbor.vhio.net/determine/custom_gpu:0.24.0.2
+ - harbor.vhio.net/determine/custom_gpu:0.24.0.3
 ```

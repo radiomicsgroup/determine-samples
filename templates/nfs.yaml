@@ -1,0 +1,5 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false

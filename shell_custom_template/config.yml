@@ -1,0 +1,5 @@
+description: kmilo-shell-custom-demo1
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  resource_pool: default-i7cpu

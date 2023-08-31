@@ -1,0 +1,9 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+environment:
+  force_pull_image: false
+  image:
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.2

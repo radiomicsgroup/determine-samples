@@ -3,19 +3,26 @@
 
 ## :gear: Install determine python locally
 
+To install determine execute the command:
 
 ```
 pip install determined
 ```
 
-Check if installed
+To Check if installed run:
 
-Run 
 ```
 det --version
 ```
 
 You must see something like  `det 0.24.0`
+
+You can update the package running:
+
+```
+pip install --upgrade determined
+```
+
 
 
 ## :rocket: Examples
@@ -26,15 +33,15 @@ You must see something like  `det 0.24.0`
 
 - cmd_custom
 
-    Run commands, when the scripts or commands ends the container is closed.(Using custom image)
+    Run commands, when the scripts or commands ends the container is closed.(Using custom image).
 
 - cmd_custom_home
 
-    Run commands, when the scripts or commands ends the container is closed.(Using custom image and load a conda enviroment from /nfs/home/cluser)
+    Run commands, when the scripts or commands ends the container is closed.(Using custom image and load a conda enviroment from /nfs/home/cluser).
 
 - jupyter
 
-    Run Jupyter from terminal
+    Run Jupyter from terminal.
 
 - mnist_torch
 
@@ -50,17 +57,20 @@ You must see something like  `det 0.24.0`
 
 - shell_custom_home_conda
 
-    Open a shell using the conda enviroment from /nfs/home/clbente
-    
+    Open a shell using the conda enviroment from /nfs/home/clbente.
+
+- shell_home_conda
+
+    Open a shell using the conda enviroment from /nfs/home/clbente but using the determined docker image.
 - shell_rtools
 
     Open a rtools and open the url locally using a browser.
 
 - train_neuro
 
-    Custom example using a example code from kaggle
+    Custom example using a example code from kaggle.
 
-## :dart: Some helpfull agent enviroment variables
+## :dart: Some helpfull agent enviroment variables(This is for the docker containers)
 
 - DET_ALLOCATION_ID=b54f9618-591e-4700-b119-e1e508f11dce.1
 
@@ -116,12 +126,15 @@ $:- det trial logs -f <UUID>
 ## :shell: Current images
 
 ```
+   CPU images
  - determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-0.24.0
  - determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-2b7e2a1
  - determinedai/environments:py-3.8-pytorch-1.12-cpu-0.24.0
  - determinedai/environments:py-3.8-tf-2.8-cpu-0.24.0
  - determinedai/environments:py-3.10-pytorch-1.12-cpu-0.24.0
  - determinedai/environments:py-3.10-pytorch-2.0-cpu-0.24.0
+
+   Cuda images
  - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.24.0
  - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-2b7e2a1
  - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-mpi-0.24.0
@@ -129,7 +142,8 @@ $:- det trial logs -f <UUID>
  - determinedai/environments:cuda-11.8-pytorch-1.12-gpu-0.24.0
  - determinedai/environments:cuda-11.3-pytorch-1.12-gpu-0.24.0
  - determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.24.0
-
+   
+   Custom Images
  - harbor.vhio.net/determine/srtools:0.24.0
  - harbor.vhio.net/determine/custom_cpu:0.24.0.2
  - harbor.vhio.net/determine/custom_gpu:0.24.0.2

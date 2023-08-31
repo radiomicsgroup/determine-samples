@@ -1,0 +1,16 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+description: kmilo-shell-determined-demo1
+environment:
+  force_pull_image: false
+  image:
+    cpu: determinedai/environments:py-3.10-pytorch-2.0-cpu-0.24.0
+    cuda: determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.24.0
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  resource_pool: default-i7cpu
+

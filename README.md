@@ -105,6 +105,7 @@ The custom images contains some extra commands and utilities like
 - Disk Usage(command `gh`), a better 'df' alternative.
 - A modern replacement for ‘ls’(command `exa`).
 - Simple terminal UI for git commands(command `lazygit`)
+- Rust [https://www.rust-lang.org/](https://www.rust-lang.org/)
 
 
 ## :memo: Templates

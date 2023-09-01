@@ -96,6 +96,17 @@ pip install --upgrade determined
 
 ** You can check all the enviroment variables running the command `printenv`
 
+## :dizzy: Custom images
+
+The custom images contains some extra commands and utilities like
+
+- Github CLI(command `gh`), you can authenticate with github running `gh auth login`
+- Parallel(command `parallel`), to launch concurrent task using a file with the commands(this is the same command using in the old cluster).
+- Disk Usage(command `gh`), a better 'df' alternative.
+- A modern replacement for ‘ls’(command `exa`).
+- Simple terminal UI for git commands(command `lazygit`)
+
+
 ## :memo: Templates
 
 You can check some basic templates.

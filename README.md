@@ -1,6 +1,11 @@
 # Determine Samples
 
 
+## :octopus: :balloon: :firecracker: How to use this Repo
+
+Please make a fork of this repo to make and store your own changes. This repo will be like the main repo for samples and documentation. 
+If you like to add some new examples or documentation please make a pull request.
+
 ## :gear: Install determine python locally
 
 To install determine execute the command:

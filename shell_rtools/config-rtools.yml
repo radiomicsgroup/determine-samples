@@ -22,8 +22,8 @@ environment:
     - DEFAULT_VNC_PASSWORD=demo1234
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/srtools:0.24.0
-    cuda: harbor.vhio.net/determine/srtools:0.24.0
+    cpu: harbor.vhio.net/determine/srtools:0.24.1
+    cuda: harbor.vhio.net/determine/srtools:0.24.1
     rocm: determinedai/environments:rocm-5.0-pytorch-1.10-tf-2.7-rocm-0.24.0
   pod_spec: null
   ports: null

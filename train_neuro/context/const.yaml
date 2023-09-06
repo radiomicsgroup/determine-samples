@@ -32,8 +32,8 @@ bind_mounts:
 environment:
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.2
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.2
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.3
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.3
 resources:
   # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
   resource_pool: amd-rtx4090-gpu

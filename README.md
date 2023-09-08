@@ -20,7 +20,7 @@ To Check if installed run:
 det --version
 ```
 
-You must see something like  `det 0.24.0`
+You must see something like  `det 0.25.0`
 
 You can update the package running:
 

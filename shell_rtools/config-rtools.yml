@@ -9,6 +9,10 @@ bind_mounts:
   read_only: false
 debug: false
 description: kmilo-rtools-demo1
+labels:
+  - kmilo
+  - shell
+  - rtools
 entrypoint: null
 environment:
   add_capabilities: null

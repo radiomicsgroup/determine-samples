@@ -5,5 +5,5 @@ labels:
   - templates
 resources:
   devices: null
-  # Default CPU: default-i7cpu | Default GPU: i9-rtx3090-gpu | AMD CPU: amd-cpu | GPU 4090: amd-rtx4090-gpu | i9 CPU: i9-cpu
+  # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
   resource_pool: default-i7cpu

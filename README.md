@@ -20,7 +20,7 @@ To Check if installed run:
 det --version
 ```
 
-You must see something like  `det 0.25.0`
+You must see something like  `det 0.25.1`
 
 You can update the package running:
 
@@ -177,7 +177,7 @@ $:- det trial logs -f <UUID>
    Custom Images
  - harbor.vhio.net/determine/srtools:0.24.1
  
- - harbor.vhio.net/determine/custom_cpu:0.24.0.3
+ - harbor.vhio.net/determine/custom_cpu:0.24.0.4
  
- - harbor.vhio.net/determine/custom_gpu:0.24.0.3
+ - harbor.vhio.net/determine/custom_gpu:0.24.0.4
 ```

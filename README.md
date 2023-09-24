@@ -175,7 +175,8 @@ $:- det trial logs -f <UUID>
  - determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.24.0
    
    Custom Images
- - harbor.vhio.net/determine/srtools:0.24.1
+   
+ - harbor.vhio.net/determine/srtools:0.24.3
  
  - harbor.vhio.net/determine/custom_cpu:0.24.0.4
  

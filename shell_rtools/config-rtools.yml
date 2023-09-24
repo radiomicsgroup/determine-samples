@@ -9,10 +9,6 @@ bind_mounts:
   read_only: false
 debug: false
 description: kmilo-rtools-demo1
-labels:
-  - kmilo
-  - shell
-  - rtools
 entrypoint: null
 environment:
   add_capabilities: null
@@ -26,9 +22,8 @@ environment:
     - DEFAULT_VNC_PASSWORD=demo1234
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/srtools:0.24.1
-    cuda: harbor.vhio.net/determine/srtools:0.24.1
-    rocm: determinedai/environments:rocm-5.0-pytorch-1.10-tf-2.7-rocm-0.24.0
+    cpu: harbor.vhio.net/determine/srtools:0.24.3
+    cuda: harbor.vhio.net/determine/srtools:0.24.3
   pod_spec: null
   ports: null
   proxy_ports:
@@ -44,7 +39,7 @@ pbs: {}
 resources:
   devices: null
   # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
-  resource_pool: default-i7cpu
+  resource_pool: amd-cpu-64
   slots: 1
   weight: 1
 slurm: {}

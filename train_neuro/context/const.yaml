@@ -33,8 +33,8 @@ bind_mounts:
 environment:
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.4
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.4
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.6
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.6
 resources:
   # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
   resource_pool: RTX_X090-gpu

@@ -4,9 +4,6 @@ bind_mounts:
   propagation: rprivate
   read_only: false
 description: kmilo-shell-determined-demo1
-labels:
-  - kmilo
-  - shell
 environment:
   force_pull_image: false
   image:

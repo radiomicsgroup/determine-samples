@@ -5,9 +5,6 @@ bind_mounts:
   read_only: false
 debug: false
 description: kmilo-shell-demo1
-labels:
-  - kmilo
-  - shell
 entrypoint: null
 environment:
   add_capabilities: null

@@ -1,9 +1,5 @@
 name: train_neuro
 description: Train Neuro model.
-labels:
-  - kmilo
-  - demo
-  - train-neuro
 data:
   trainpath: /nfs/rnas/kmilo/neuro/Testing/
   testpath: /nfs/rnas/kmilo/neuro/Training/

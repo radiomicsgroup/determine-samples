@@ -1,8 +1,4 @@
 description: kmilo-shell-custom-demo1
-labels:
-  - kmilo
-  - shell
-  - templates
 resources:
   devices: null
   # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu

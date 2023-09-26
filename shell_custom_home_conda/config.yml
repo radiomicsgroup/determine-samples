@@ -5,9 +5,6 @@ bind_mounts:
   read_only: false
 debug: false
 description: kmilo-shell-custom-demo1
-labels:
-  - kmilo
-  - shell
 environment:
   force_pull_image: false
   image:

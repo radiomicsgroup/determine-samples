@@ -5,9 +5,6 @@ bind_mounts:
   read_only: false
 debug: false
 description: kmilo-cmd-demo1
-labels:
-  - kmilo
-  - cmd
 entrypoint: null
 environment:
   add_capabilities: null

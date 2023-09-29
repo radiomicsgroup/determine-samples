@@ -176,9 +176,9 @@ $:- det trial logs -f <UUID>
    
    Custom Images
    
- - harbor.vhio.net/determine/srtools:0.24.3
+ - harbor.vhio.net/determine/srtools:0.24.4
  
- - harbor.vhio.net/determine/custom_cpu:0.24.0.6
+ - harbor.vhio.net/determine/custom_cpu:0.24.0.7
  
- - harbor.vhio.net/determine/custom_gpu:0.24.0.6
+ - harbor.vhio.net/determine/custom_gpu:0.24.0.7
 ```

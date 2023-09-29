@@ -22,8 +22,8 @@ environment:
     - DEFAULT_VNC_PASSWORD=demo1234
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/srtools:0.24.4
-    cuda: harbor.vhio.net/determine/srtools:0.24.4
+    cpu: harbor.vhio.net/determine/srtools:0.24.3
+    cuda: harbor.vhio.net/determine/srtools:0.24.3
   pod_spec: null
   ports: null
   proxy_ports:

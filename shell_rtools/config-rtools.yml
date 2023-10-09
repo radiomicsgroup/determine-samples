@@ -11,7 +11,9 @@ debug: false
 description: kmilo-rtools-demo1
 entrypoint: null
 environment:
-  add_capabilities: null
+  add_capabilities: 
+    - SYS_ADMIN
+    - DAC_READ_SEARCH
   drop_capabilities: null
   environment_variables: 
     - RESOLUTION=1920x1080

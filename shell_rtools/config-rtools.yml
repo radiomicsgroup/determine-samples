@@ -3,10 +3,6 @@ bind_mounts:
   host_path: /nfs
   propagation: rprivate
   read_only: false
-- container_path: /opt/fsl
-  host_path: /nfs/rwork/software/soft_ubuntu/fsl
-  propagation: rprivate
-  read_only: false
 debug: false
 description: kmilo-rtools-demo1
 entrypoint: null

@@ -1,5 +1,5 @@
 
-export PATH=$PATH:/nfs/Data/Disk1/soft/Slicer-4.11.20210226-linux-amd64/
+export PATH=$PATH:/nfs/rwork/software/soft_ubuntu/3dslicer41120/Slicer-4.11.20210226-linux-amd64/
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

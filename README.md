@@ -1,34 +1,31 @@
 # Determine Samples
 
-
 ## :octopus: :balloon: :firecracker: How to use this Repo
 
-Please make a fork of this repo to make and store your own changes. This repo will be like the main repo for samples and documentation. 
+Please make a fork of this repo to make and store your own changes. This repo will be like the main repo for samples and documentation.
 If you like to add some new examples or documentation please make a pull request.
 
 ## :gear: Install determine python locally
 
 To install determine execute the command:
 
-```
+```bash
 pip install determined
 ```
 
 To Check if installed run:
 
-```
+```bash
 det --version
 ```
 
-You must see something like  `det 0.26.1`
+You must see something like  `det 0.26.4`
 
 You can update the package running:
 
-```
+```bash
 pip install --upgrade determined
 ```
-
-
 
 ## :rocket: Examples
 
@@ -50,7 +47,7 @@ pip install --upgrade determined
 
 - mnist_torch
 
-    Run the mnist_torch example(From https://docs.determined.ai/).
+    Run the mnist_torch example(From <https://docs.determined.ai/>).
 
 - shell
 
@@ -67,19 +64,23 @@ pip install --upgrade determined
 - shell_custom_template
 
     Open a shell using a template.
-    
+
 - shell_home_conda
 
     Open a shell using the conda enviroment from /nfs/home/clbente but using the determined docker image.
 
 - shell_home_conda_template
 
-    Open a shell using the conda enviroment from /nfs/home/clbente but using the determined docker image. 
+    Open a shell using the conda enviroment from /nfs/home/clbente but using the determined docker image.
     Using a template.
 
 - shell_rtools
 
     Open a rtools and open the url locally using a browser.
+
+- shell_streamlit
+
+    Open a streamlit app and open the url locally using a browser.
 
 - train_neuro
 
@@ -112,14 +113,13 @@ The custom images contains some extra commands and utilities like
 - Simple terminal UI for git commands(command `lazygit`)
 - Rust [https://www.rust-lang.org/](https://www.rust-lang.org/)
 
-
 ## :memo: Templates
 
 You can check some basic templates.
 
 ## :alembic: Some commands examples
 
-```
+```bash
 # list users
 $:- det user
 
@@ -156,7 +156,7 @@ $:- det trial logs -f <UUID>
 
 ## :shell: Current images
 
-```
+```bash
    CPU images
  - determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-0.24.0
  - determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-2b7e2a1

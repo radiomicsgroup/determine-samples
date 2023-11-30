@@ -1,0 +1,31 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+debug: false
+description: kmilo-streamlit-demo1
+entrypoint: null
+environment:
+  force_pull_image: false
+  image:
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.7
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.0.7
+  pod_spec: null
+  ports: null
+  proxy_ports:
+    - proxy_port: 8502
+      proxy_tcp: true
+      unauthenticated: true
+idle_timeout: null
+notebook_idle_type: kernels_or_terminals
+pbs: {}
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
+  resource_pool: amd-cpu-64
+  slots: 1
+  weight: 1
+  shm_size: 4GiB
+slurm: {}
+work_dir: null

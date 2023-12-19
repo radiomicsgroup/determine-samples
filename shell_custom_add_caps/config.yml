@@ -3,6 +3,10 @@ bind_mounts:
   host_path: /nfs
   propagation: rprivate
   read_only: false
+- container_path: /var/run/docker.sock
+  host_path: /var/run/docker.sock
+  propagation: rprivate
+  read_only: false
 debug: false
 description: kmilo-shell-custom-add-caps
 environment:
@@ -16,7 +20,7 @@ environment:
 resources:
   devices: null
   # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
-  resource_pool: amd-cpu-64
+  resource_pool: default-i7cpu
   slots: 1
   weight: 1
   shm_size: 4GiB

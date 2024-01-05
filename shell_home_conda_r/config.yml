@@ -1,0 +1,19 @@
+bind_mounts:
+- container_path: /nfs
+  host_path: /nfs
+  propagation: rprivate
+  read_only: false
+debug: false
+description: kmilo-shell-R-Jupyter
+environment:
+  force_pull_image: false
+  image:
+    cpu: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-0.24.0
+    cuda: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.24.0
+resources:
+  devices: null
+  # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
+  resource_pool: amd-cpu-64
+  slots: 1
+  weight: 1
+work_dir: null

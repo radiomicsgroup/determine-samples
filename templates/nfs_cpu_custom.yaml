@@ -6,4 +6,4 @@ bind_mounts:
 environment:
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.7
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.0.9

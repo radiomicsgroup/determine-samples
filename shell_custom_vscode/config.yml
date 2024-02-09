@@ -8,11 +8,15 @@ bind_mounts:
   propagation: rprivate
   read_only: false
 debug: false
-description: kmilo-shell-custom-add-caps
+description: kmilo-shell-vscode-web
 environment:
   add_capabilities: 
     - SYS_ADMIN
     - DAC_READ_SEARCH
+  drop_capabilities: null
+  environment_variables: 
+    - PASSWORD=demo1234
+    - HOMECONFIG=/nfs/home/demo/config
   force_pull_image: false
   image:
     cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.0

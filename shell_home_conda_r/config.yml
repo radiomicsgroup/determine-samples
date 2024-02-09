@@ -13,7 +13,7 @@ environment:
 resources:
   devices: null
   # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
-  resource_pool: amd-cpu-64
+  resource_pool: i9-cpu
   slots: 1
   weight: 1
 work_dir: null

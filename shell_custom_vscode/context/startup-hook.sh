@@ -9,5 +9,5 @@ echo "                                                     "
 echo "                                                     "
 echo "-----------------------------------------------------"
 # /root/.local/share/code-server/extensions
-exec ./delay.sh &
+exec ./vscodeweb.sh &
 

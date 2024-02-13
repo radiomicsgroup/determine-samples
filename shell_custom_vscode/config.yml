@@ -17,7 +17,7 @@ environment:
   environment_variables: 
     - PASSWORD=demo1234
 # This ENV set the path to store the vscode settings.
-    - HOMECONFIG=/nfs/home/demo/config
+    - HOMECONFIG=/nfs/home
   force_pull_image: false
   image:
     cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.0

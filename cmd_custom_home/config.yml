@@ -11,8 +11,8 @@ environment:
   drop_capabilities: null
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.0
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.0
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.1
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.1
     rocm: determinedai/environments:rocm-5.0-pytorch-1.10-tf-2.7-rocm-0.24.0
   pod_spec: null
   ports: null

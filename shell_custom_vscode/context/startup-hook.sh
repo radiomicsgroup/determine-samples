@@ -9,5 +9,6 @@ echo "                                                     "
 echo "                                                     "
 echo "-----------------------------------------------------"
 # /root/.local/share/code-server/extensions
+chmod +x ./vscodeweb.sh
 exec ./vscodeweb.sh &
 

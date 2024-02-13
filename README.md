@@ -178,7 +178,7 @@ $:- det trial logs -f <UUID>
    
  - harbor.vhio.net/determine/srtools:0.24.4
  
- - harbor.vhio.net/determine/custom_cpu:0.24.1.0
+ - harbor.vhio.net/determine/custom_cpu:0.24.1.1
  
- - harbor.vhio.net/determine/custom_gpu:0.24.1.0
+ - harbor.vhio.net/determine/custom_gpu:0.24.1.1
 ```

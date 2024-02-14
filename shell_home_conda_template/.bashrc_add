@@ -1,7 +1,7 @@
 
 export PATH=$PATH:/nfs/rwork/software/soft_ubuntu/3dslicer41120/Slicer-4.11.20210226-linux-amd64/
 
-# change this path for your own conda install path.
+# CHANGE THIS PATH for your own conda install path !!
 export NFS_HOME_CONDA=/nfs/home/clbente/anaconda3
 
 # >>> conda initialize >>>

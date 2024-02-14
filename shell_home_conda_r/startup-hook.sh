@@ -34,11 +34,3 @@ commit="CHANGE THIS"
 
 )
 
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-apt-get update &&  apt-get install -y dotnet-sdk-8.0 libfontconfig1-dev libfreetype-dev 
-apt-get install -y libfreetype6 libfreetype6-dev libpng-dev libharfbuzz-dev libfribidi-dev 
-apt-get install -y libtiff-dev libssl-dev libcurl4-openssl-dev unixodbc-dev libxml2-dev libmariadb-dev 
-apt-get install -y libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev 
-apt-get install -y libjpeg-dev liblapack-dev libblas-dev libssl-dev libcurl4-openssl-dev libxml2-dev

@@ -7,6 +7,7 @@
 
 echo "******************************************"
 echo " Update and install requirements"
-apt update && apt install -y graphviz
+# Already install in the custom image
+#apt update && apt install -y graphviz
 pip install -r requirements.txt
 echo "******************************************"

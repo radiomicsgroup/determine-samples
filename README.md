@@ -164,6 +164,10 @@ $:- det trial logs -f <UUID>
  - determinedai/environments:py-3.8-tf-2.8-cpu-0.24.0
  - determinedai/environments:py-3.10-pytorch-1.12-cpu-0.24.0
  - determinedai/environments:py-3.10-pytorch-2.0-cpu-0.24.0
+ - determinedai/environments:py-3.8-tf-2.8-cpu-0.27.1
+ - determinedai/environments:py-3.9-pytorch-1.12-tf-2.11-cpu-0.27.1
+ - determinedai/environments:py-3.9-pytorch-1.12-cpu-0.27.1
+ - determinedai/environments:py-3.10-pytorch-2.0-cpu-0.27.1
 
    Cuda images
  - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.24.0
@@ -173,7 +177,11 @@ $:- det trial logs -f <UUID>
  - determinedai/environments:cuda-11.8-pytorch-1.12-gpu-0.24.0
  - determinedai/environments:cuda-11.3-pytorch-1.12-gpu-0.24.0
  - determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.24.0
-   
+ - determinedai/environments:cuda-11.3-pytorch-1.12-gpu-0.27.1
+ - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.27.1
+ - determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.27.1
+ - determinedai/environments:cuda-11.2-tf-2.8-gpu-0.27.1 
+
    Custom Images
    
  - harbor.vhio.net/determine/srtools:0.24.4

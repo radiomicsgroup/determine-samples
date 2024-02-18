@@ -19,7 +19,7 @@ To Check if installed run:
 det --version
 ```
 
-You must see something like  `det 0.26.4`
+You must see something like  `det 0.28.0`
 
 You can update the package running:
 
@@ -41,6 +41,10 @@ pip install --upgrade determined
 
     Run commands, when the scripts or commands ends the container is closed.(Using custom image and load a conda enviroment from /nfs/home/cluser).
 
+- cmd_rtools_matlab
+
+    Run a matlab code as a command without UI.
+
 - jupyter
 
     Run Jupyter from terminal.
@@ -57,6 +61,10 @@ pip install --upgrade determined
 
     Open a shell using the custom image.
 
+- shell_custom_add_caps
+
+    Open a shell with extra capabilities
+
 - shell_custom_home_conda
 
     Open a shell using the conda enviroment from /nfs/home/clbente.
@@ -64,6 +72,10 @@ pip install --upgrade determined
 - shell_custom_template
 
     Open a shell using a template.
+
+- shell_custom_vscode
+
+    Open a shell and run a Vs code web to use in the browser.
 
 - shell_home_conda
 
@@ -104,14 +116,25 @@ pip install --upgrade determined
 
 ## :dizzy: Custom images
 
-The custom images contains some extra commands and utilities like
+The custom images contains some extra commands and utilities like:
 
 - Github CLI(command `gh`), you can authenticate with github running `gh auth login`
 - Parallel(command `parallel`), to launch concurrent task using a file with the commands(this is the same command using in the old cluster).
 - Disk Usage(command `gh`), a better 'df' alternative.
 - A modern replacement for ‘ls’(command `exa`).
 - Simple terminal UI for git commands(command `lazygit`)
+- pandoc [https://pandoc.org/](https://pandoc.org/)
 - Rust [https://www.rust-lang.org/](https://www.rust-lang.org/)
+- Go [https://go.dev/](https://go.dev/)
+- dot.NET [https://dot.net](https://dot.net)
+- octave [https://octave.org/](https://octave.org/)
+- Docker [https://www.docker.com/](https://www.docker.com/)
+- Docker-compose [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
+- Vs code Web Coder [https://github.com/coder/code-server](https://github.com/coder/code-server)
+- Earthly [https://earthly.dev/](https://earthly.dev/)
+- Advanced Normalization Tools (ANTs) [https://github.com/ANTsX/ANTs](https://github.com/ANTsX/ANTs)
+
+For More check [dockerfile](./dockerfile)
 
 ## :memo: Templates
 

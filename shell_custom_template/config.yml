@@ -1,5 +1,5 @@
-description: kmilo-shell-custom-demo1
+description: example-shell-custom-template-demo1
 resources:
   devices: null
-  # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
-  resource_pool: default-i7cpu
+  # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
+  resource_pool: CPU

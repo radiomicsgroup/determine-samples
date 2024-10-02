@@ -1,10 +1,8 @@
 
-set DET_MASTER=172.27.1.63:80
+REM set DET_MASTER=172.27.40.232:80
 
-set DET_USER=demo
-set DET_PASS=demo
-
-det experiment create -f context\const.yaml context\
+REM set DET_USER=demo
+REM set DET_PASS=demo
 
 REM Train the model with constant hyperparameter values.
 det experiment create -f context\const.yaml context\

@@ -1,10 +1,10 @@
 
 #!/bin/bash
 
-export DET_MASTER=172.27.1.63:80
+#export DET_MASTER=172.27.40.232:80
 
-export DET_USER=demo
-export DET_PASS=demo
+#export DET_USER=demo
+#export DET_PASS=demo
 
 # Train the model with constant hyperparameter values.
 det experiment create -f ./context/const.yaml ./context

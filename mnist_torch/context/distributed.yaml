@@ -1,6 +1,11 @@
-name: mnist_pytorch_distributed
+name: mnist_pytorch_distributed2
 workspace: demo-testing
 project: neuro-demo
+bind_mounts:
+- container_path: /nfs/rwork/checkpoint_storage
+  host_path: /nfs/rwork/checkpoint_storage
+  propagation: rprivate
+  read_only: false
 data:
   url: https://s3-us-west-2.amazonaws.com/determined-ai-test-data/pytorch_mnist.tar.gz
 hyperparameters:
@@ -11,7 +16,8 @@ hyperparameters:
   dropout1: 0.25
   dropout2: 0.5
 resources:
-  slots_per_trial: 8
+  slots_per_trial: 2
+  resource_pool: RTX_X090
 searcher:
   name: single
   metric: validation_loss

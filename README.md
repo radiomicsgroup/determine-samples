@@ -19,7 +19,7 @@ To Check if installed run:
 det --version
 ```
 
-You must see something like  `det 0.28.0`
+You must see something like  `det 0.37.0`
 
 You can update the package running:
 
@@ -104,9 +104,10 @@ pip install --upgrade determined
 
     Agent Task ID.
 
-- DET_AGENT_ID=Agent_i7_CPU_172.27.1.63_04
+- DET_AGENT_ID=Agent_i7_CPU_192.168.100.234_04
 
     Agent Id, in this case when a agent is setup the ID contains the IP address of the machine.
+    This IP is internal to a local network
 
 - DET_USER=demo
 
@@ -119,22 +120,21 @@ pip install --upgrade determined
 The custom images contains some extra commands and utilities like:
 
 - Github CLI(command `gh`), you can authenticate with github running `gh auth login`
-- Parallel(command `parallel`), to launch concurrent task using a file with the commands(this is the same command using in the old cluster).
+- Parallel(command `parallel`), to launch concurrent task [https://manpages.ubuntu.com/manpages/focal/en/man1/parallel.1.html](https://manpages.ubuntu.com/manpages/focal/en/man1/parallel.1.html)
 - Disk Usage(command `gh`), a better 'df' alternative.
 - A modern replacement for ‘ls’(command `exa`).
 - Simple terminal UI for git commands(command `lazygit`)
 - pandoc [https://pandoc.org/](https://pandoc.org/)
-- Rust [https://www.rust-lang.org/](https://www.rust-lang.org/)
 - Go [https://go.dev/](https://go.dev/)
 - dot.NET [https://dot.net](https://dot.net)
-- octave [https://octave.org/](https://octave.org/)
 - Docker [https://www.docker.com/](https://www.docker.com/)
 - Docker-compose [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
 - Vs code Web Coder [https://github.com/coder/code-server](https://github.com/coder/code-server)
 - Earthly [https://earthly.dev/](https://earthly.dev/)
 - Advanced Normalization Tools (ANTs) [https://github.com/ANTsX/ANTs](https://github.com/ANTsX/ANTs)
+- more ....
 
-For More check [dockerfile](./dockerfile)
+For More check CPU [dockerfile.cpu](./dockerfile.cpu) and GPU [dockerfile.gpu](./dockerfile.gpu) (**This dockerfile is for the latest image**)
 
 ## :memo: Templates
 
@@ -159,57 +159,43 @@ $:- det user create USER
 $:- det user change-password USER
 
 # re-atach to shell
-$:- det shell open ID-TASK 
+$:- det shell open ID-TASK
 
 # list Agents
 $:- det agent ls
 
 # to view a snapshot of logs.
-$:- det cmd logs <UUID> 
+$:- det cmd logs <UUID>
 
 # to view the current logs and continue streaming future output.
-$:- det cmd logs -f <UUID> 
+$:- det cmd logs -f <UUID>
 
 # to stop the command.
-$:- det cmd kill <UUID> 
+$:- det cmd kill <UUID>
 
 # Get experiments logs
-$:- det trial logs -f <UUID> 
+$:- det trial logs -f <UUID>
 ```
 
 ## :shell: Current images
 
+You can use all 'determinedai/environments/*' docker images but is prefer to use the custom local images
+
+**We only maintaining the latest 3 images version, so when a new version is added to the cluster we remove the oldest image version.**
+
 ```bash
-   CPU images
- - determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-0.24.0
- - determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-2b7e2a1
- - determinedai/environments:py-3.8-pytorch-1.12-cpu-0.24.0
- - determinedai/environments:py-3.8-tf-2.8-cpu-0.24.0
- - determinedai/environments:py-3.10-pytorch-1.12-cpu-0.24.0
- - determinedai/environments:py-3.10-pytorch-2.0-cpu-0.24.0
- - determinedai/environments:py-3.8-tf-2.8-cpu-0.27.1
- - determinedai/environments:py-3.9-pytorch-1.12-tf-2.11-cpu-0.27.1
- - determinedai/environments:py-3.9-pytorch-1.12-cpu-0.27.1
- - determinedai/environments:py-3.10-pytorch-2.0-cpu-0.27.1
-
-   Cuda images
- - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.24.0
- - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-2b7e2a1
- - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-mpi-0.24.0
- - determinedai/environments:cuda-11.2-tf-2.8-gpu-0.24.0
- - determinedai/environments:cuda-11.8-pytorch-1.12-gpu-0.24.0
- - determinedai/environments:cuda-11.3-pytorch-1.12-gpu-0.24.0
- - determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.24.0
- - determinedai/environments:cuda-11.3-pytorch-1.12-gpu-0.27.1
- - determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-0.27.1
- - determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.27.1
- - determinedai/environments:cuda-11.2-tf-2.8-gpu-0.27.1 
-
    Custom Images
-   
- - harbor.vhio.net/determine/srtools:0.24.4
- 
- - harbor.vhio.net/determine/custom_cpu:0.24.1.3
- 
- - harbor.vhio.net/determine/custom_gpu:0.24.1.3
+
+ - harbor.vhio.net/desktop:0.0.1
+
+ - harbor.vhio.net/determine/srtools:0.24.5
+
+ - harbor.vhio.net/determine/custom_cpu:0.24.1.5
+ - harbor.vhio.net/determine/custom_cpu:0.24.1.6
+ - harbor.vhio.net/determine/custom_cpu:0.24.1.7
+
+ - harbor.vhio.net/determine/custom_gpu:0.24.1.5
+ - harbor.vhio.net/determine/custom_gpu:0.24.1.6
+ - harbor.vhio.net/determine/custom_gpu:0.24.1.7
+
 ```

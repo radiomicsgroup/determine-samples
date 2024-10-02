@@ -1,10 +1,10 @@
 
-set DET_MASTER=172.27.1.63:80
+REM set DET_MASTER=172.27.40.232:80
 
-set DET_USER=demo
-set DET_PASS=demo
+REM set DET_USER=demo
+REM set DET_PASS=demo
 
-det shell start --template main_template-nfs_cpu_custom --config-file config.yml -w kmilo-demo 
+det shell start --template main_template-nfs_cpu_custom --config-file config.yml -w demo-testing 
 
 REM det shell open <SHELL UUID> 
 

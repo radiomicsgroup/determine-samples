@@ -1,6 +1,8 @@
 import multiprocessing
 import numpy
 import os
+import traceback
+import logging
 from slack_webhook import Slack
 
 print(" cpu_count ",multiprocessing.cpu_count())
@@ -23,4 +25,8 @@ for d in folders:
 
 slack_url = os.getenv('SLACK_URL')
 slack = Slack(url=slack_url)
-slack.post(text="End demo cmd task in determine. Cpucount= {cpu}, numpy_version= {numpyver}".format(cpu=multiprocessing.cpu_count(),numpyver=numpy.__version__))
+try:
+    slack.post(text="End demo cmd task in determine. Cpucount= {cpu}, numpy_version= {numpyver}".format(cpu=multiprocessing.cpu_count(),numpyver=numpy.__version__))
+except Exception as e:
+    print("You don't update the slack url")
+    logging.error(traceback.format_exc())

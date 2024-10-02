@@ -1,8 +1,8 @@
 name: train_neuro
 description: Train Neuro model.
 data:
-  trainpath: /nfs/rnas/kmilo/neuro/Testing/
-  testpath: /nfs/rnas/kmilo/neuro/Training/
+  trainpath: /nfs/rwork/code/example/neuro/Testing/
+  testpath: /nfs/rwork/code/example/neuro/Training/
   unique_labels: 4
 workspace: demo-testing
 project: neuro-demo
@@ -17,7 +17,7 @@ searcher:
   name: single
   metric: val_accuracy
   max_length:
-      batches: 950 
+      batches: 950
   smaller_is_better: false
 #entrypoint:  python3 -m determined.launch.horovod --autohorovod --trial model_def:NeuroTrial
 entrypoint: model_def:NeuroTrial
@@ -29,8 +29,8 @@ bind_mounts:
 environment:
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.3
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.3
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.7
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.7
 resources:
-  # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
-  resource_pool: RTX_X090-gpu
+  # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
+  resource_pool: RTX_X090

@@ -4,16 +4,16 @@ bind_mounts:
   propagation: rprivate
   read_only: false
 debug: false
-description: kmilo-shell-custom-demo1
+description: example-shell-custom-demo1
 environment:
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.3
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.3
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.7
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.7
 resources:
   devices: null
-  # Default CPU: default-i7cpu | Default GPU: RTX_X090-gpu | AMD CPU .34: amd-cpu-64 | AMD CPU .1.26: amd-cpu-128 | i9 CPU: i9-cpu
-  resource_pool: default-i7cpu
+  # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
+  resource_pool: CPU
   slots: 1
   weight: 1
 work_dir: null

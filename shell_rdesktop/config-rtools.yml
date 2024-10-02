@@ -4,18 +4,27 @@ bind_mounts:
   propagation: rprivate
   read_only: false
 debug: false
-description: example-cmd-demo1
+description: example-rdesktop-demo1
 entrypoint: null
 environment:
-  add_capabilities: null
+  add_capabilities: 
+    - SYS_ADMIN
+    - DAC_READ_SEARCH
   drop_capabilities: null
+  environment_variables: 
+# You have to open the browser using the same password
+# the user is: kasm_user
+    - VNC_PW=password2
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.7
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.7
+    cpu: harbor.vhio.net/desktop:0.0.1
+    cuda: harbor.vhio.net/desktop:0.0.1
   pod_spec: null
   ports: null
-  proxy_ports: null
+  proxy_ports:
+    - proxy_port: 6901
+      proxy_tcp: true
+      unauthenticated: true
 idle_timeout: null
 notebook_idle_type: kernels_or_terminals
 pbs: {}
@@ -25,5 +34,6 @@ resources:
   resource_pool: CPU
   slots: 1
   weight: 1
+  shm_size: 2GiB
 slurm: {}
 work_dir: null

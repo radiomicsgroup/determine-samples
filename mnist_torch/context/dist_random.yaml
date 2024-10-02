@@ -5,6 +5,7 @@ data:
   url: https://s3-us-west-2.amazonaws.com/determined-ai-test-data/pytorch_mnist.tar.gz
 resources:
   slots_per_trial: 2
+  resource_pool: RTX_X090
 hyperparameters:
   global_batch_size: 64
   learning_rate:
@@ -34,4 +35,4 @@ searcher:
   max_trials: 2
   max_length:
     batches: 937 #60,000 training images with batch size 64
-entrypoint: model_def:MNistTrial                           
+entrypoint: model_def:MNistTrial

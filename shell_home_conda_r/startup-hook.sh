@@ -8,13 +8,16 @@ echo "                                          "
 echo "------------------------------------------"
 cat .bashrc_add >>/root/.bashrc
 
+# TODO
+# CHANGE THIS BEFORE RUN !!!!!!!
+# YOU MUST CHANGE THIS EVERY TIME YOU UPDATE YOUR LOCAL VSCODE
 # Enter VS Code commit hash (Help -> About)
 commit="CHANGE THIS"
 
 [ "$commit" ] && (
     set -e
     if [ -d "$HOME/.vscode-server/bin/$commit" ] ; then
-        echo "VS Code server commit:$commit already installed."        
+        echo "VS Code server commit:$commit already installed."
     else
         curl -sL "https://update.code.visualstudio.com/commit:$commit/server-linux-x64/stable" | \
         tar -C "$HOME" -xz --transform "s#^vscode-server-linux-x64/#.vscode-server/bin/$commit/#"

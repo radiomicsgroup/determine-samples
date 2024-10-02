@@ -1,9 +1,0 @@
-bind_mounts:
-- container_path: /nfs
-  host_path: /nfs
-  propagation: rprivate
-  read_only: false
-environment:
-  force_pull_image: false
-  image:
-    cuda: determinedai/environments:cuda-11.8-pytorch-2.0-gpu-0.24.0  

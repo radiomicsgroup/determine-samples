@@ -190,12 +190,12 @@ You can use all 'determinedai/environments/*' docker images but is prefer to use
 
  - harbor.vhio.net/determine/srtools:0.24.5
 
- - harbor.vhio.net/determine/custom_cpu:0.24.1.5
  - harbor.vhio.net/determine/custom_cpu:0.24.1.6
  - harbor.vhio.net/determine/custom_cpu:0.24.1.7
+ - harbor.vhio.net/determine/custom_cpu:0.24.1.8
 
- - harbor.vhio.net/determine/custom_gpu:0.24.1.5
  - harbor.vhio.net/determine/custom_gpu:0.24.1.6
  - harbor.vhio.net/determine/custom_gpu:0.24.1.7
+ - harbor.vhio.net/determine/custom_gpu:0.24.1.8
 
 ```

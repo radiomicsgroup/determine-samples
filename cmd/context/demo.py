@@ -4,10 +4,14 @@ import os
 import traceback
 import logging
 from slack_webhook import Slack
+import time
+
 
 print(" cpu_count ",multiprocessing.cpu_count())
 print(" numpy version ", numpy.__version__)
 
+print("Time Delay 4 minutes")
+time.sleep(4*60) # Delay for 4 minute (4*60 seconds).
 
 files   = []
 folders = []

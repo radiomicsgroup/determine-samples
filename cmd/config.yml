@@ -15,8 +15,8 @@ environment:
     - SLACK_URL=https://hooks.slack.com/services/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
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.1.8
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.1.8
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.2.0
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.0
   pod_spec: null
   ports: null
   proxy_ports: null

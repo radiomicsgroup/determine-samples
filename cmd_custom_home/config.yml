@@ -11,8 +11,8 @@ environment:
   drop_capabilities: null
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.2.0
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.0
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.2.3
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.3
   pod_spec: null
   ports: null
   proxy_ports: null
@@ -22,7 +22,7 @@ pbs: {}
 resources:
   devices: null
   # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
-  resource_pool: CPU
+  resource_pool: CPU1
   slots: 1
   weight: 1
 slurm: {}

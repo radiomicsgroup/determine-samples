@@ -19,7 +19,7 @@ To Check if installed run:
 det --version
 ```
 
-You must see something like  `det 0.37.0`
+You must see something like  `det 0.38.1`
 
 You can update the package running:
 
@@ -190,12 +190,10 @@ You can use all 'determinedai/environments/*' docker images but is prefer to use
 
  - harbor.vhio.net/determine/srtools:0.24.5
 
- - harbor.vhio.net/determine/custom_cpu:0.24.1.7
- - harbor.vhio.net/determine/custom_cpu:0.24.1.8
- - harbor.vhio.net/determine/custom_cpu:0.24.2.0
+ - harbor.vhio.net/determine/custom_cpu:0.24.2.2
+ - harbor.vhio.net/determine/custom_cpu:0.24.2.3
 
- - harbor.vhio.net/determine/custom_gpu:0.24.1.7
- - harbor.vhio.net/determine/custom_gpu:0.24.1.8
- - harbor.vhio.net/determine/custom_gpu:0.24.2.0
+ - harbor.vhio.net/determine/custom_gpu:0.24.2.2
+ - harbor.vhio.net/determine/custom_gpu:0.24.2.3
 
 ```

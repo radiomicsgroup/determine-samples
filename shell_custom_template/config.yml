@@ -2,4 +2,4 @@ description: example-shell-custom-template-demo1
 resources:
   devices: null
   # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
-  resource_pool: CPU
+  resource_pool: CPU1

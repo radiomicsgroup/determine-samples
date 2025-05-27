@@ -34,11 +34,13 @@ class NeuroTrial(TFKerasTrial):
         self.context = context
 
     def build_model(self):
-
         IMAGE_SIZE = int(self.context.get_hparam("image_zise"))
 
-        base_model = tf.keras.applications.vgg16.VGG16(input_shape=(IMAGE_SIZE, IMAGE_SIZE, 3),
-                                                       include_top=False, weights='imagenet')
+        base_model = tf.keras.applications.vgg16.VGG16(
+            input_shape=(IMAGE_SIZE, IMAGE_SIZE, 3),
+            include_top=False,
+            weights="imagenet",
+        )
         # Set all layers to non-trainable
         for layer in base_model.layers:
             layer.trainable = False
@@ -54,36 +56,36 @@ class NeuroTrial(TFKerasTrial):
         model.add(base_model)
         model.add(tf.keras.layers.Flatten())
         model.add(tf.keras.layers.Dropout(0.3))
-        model.add(tf.keras.layers.Dense(128, activation='relu'))
+        model.add(tf.keras.layers.Dense(128, activation="relu"))
         model.add(tf.keras.layers.Dropout(0.2))
-        model.add(tf.keras.layers.Dense(dense_layer_num, activation='softmax'))
+        model.add(tf.keras.layers.Dense(dense_layer_num, activation="softmax"))
 
         # Wrap the model.
         model = self.context.wrap_model(model)
         optimizer = tf.keras.optimizers.legacy.Adam(
-            learning_rate=float(self.context.get_hparam("learning_rate")))
+            learning_rate=float(self.context.get_hparam("learning_rate"))
+        )
 
         optimizer = self.context.wrap_optimizer(optimizer)
 
-
         model.compile(
             optimizer=optimizer,
-            loss=tf.keras.losses.SparseCategoricalCrossentropy(
-                from_logits=True),
-            metrics=[tf.keras.metrics.SparseCategoricalAccuracy(
-                name="accuracy")],
+            loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+            metrics=[tf.keras.metrics.SparseCategoricalAccuracy(name="accuracy")],
         )
 
         return model
 
     def build_training_data_loader(self) -> InputData:
         train_images, train_labels = data.load_training_data(
-            self.context.get_data_config(), self.context.get_hparam("image_zise"))
+            self.context.get_data_config(), self.context.get_hparam("image_zise")
+        )
 
         return train_images, train_labels
 
     def build_validation_data_loader(self) -> InputData:
         test_images, test_labels = data.load_validation_data(
-            self.context.get_data_config(), self.context.get_hparam("image_zise"))
+            self.context.get_data_config(), self.context.get_hparam("image_zise")
+        )
 
         return test_images, test_labels

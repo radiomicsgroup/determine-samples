@@ -18,6 +18,6 @@ pbs: {}
 resources:
   devices: null
   # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
-  resource_pool: CPU
+  resource_pool: CPU1
 slurm: {}
 work_dir: null

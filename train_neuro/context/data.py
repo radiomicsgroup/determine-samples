@@ -31,7 +31,7 @@ from typing import Any, Dict
 
 
 def encode_label(labels, train_dir):
-    meta_labels =os.listdir(train_dir)
+    meta_labels = os.listdir(train_dir)
     encoded = []
     for x in labels:
         label = meta_labels.index(x)
@@ -40,7 +40,7 @@ def encode_label(labels, train_dir):
 
 
 def decode_label(labels, train_dir):
-    meta_labels =os.listdir(train_dir)
+    meta_labels = os.listdir(train_dir)
     decoded = []
     for x in labels:
         label = meta_labels[x]
@@ -49,13 +49,13 @@ def decode_label(labels, train_dir):
 
 
 def open_images(paths, IMAGE_SIZE):
-    '''
+    """
     Given a list of paths to images, this function returns the images as arrays (after augmenting them)
-    '''
+    """
     images = []
     for path in paths:
         # Fix for Synology NAS
-        if "@eaDir" in path :
+        if "@eaDir" in path:
             continue
         image = load_img(path, target_size=(IMAGE_SIZE, IMAGE_SIZE))
         image = augment_image(image)
@@ -67,7 +67,7 @@ def augment_image(image):
     image = Image.fromarray(np.uint8(image))
     image = ImageEnhance.Brightness(image).enhance(random.uniform(0.8, 1.2))
     image = ImageEnhance.Contrast(image).enhance(random.uniform(0.8, 1.2))
-    image = np.array(image)/255.0
+    image = np.array(image) / 255.0
     return image
 
 
@@ -86,9 +86,9 @@ def load_training_data(data_config: Dict[str, Any], IMAGE_SIZE: int):
 
     train_paths, train_labels = shuffle(train_paths, train_labels)
 
-    train_images = open_images(train_paths, IMAGE_SIZE) 
+    train_images = open_images(train_paths, IMAGE_SIZE)
 
-    return train_images, encode_label(train_labels,train_dir)
+    return train_images, encode_label(train_labels, train_dir)
 
 
 def load_validation_data(data_config: Dict[str, Any], IMAGE_SIZE: int):
@@ -104,6 +104,6 @@ def load_validation_data(data_config: Dict[str, Any], IMAGE_SIZE: int):
             test_labels.append(label)
 
     test_paths, test_labels = shuffle(test_paths, test_labels)
-    test_images = open_images(test_paths, IMAGE_SIZE) 
+    test_images = open_images(test_paths, IMAGE_SIZE)
 
-    return test_images, encode_label(test_labels,test_dir)
+    return test_images, encode_label(test_labels, test_dir)

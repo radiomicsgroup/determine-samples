@@ -1,6 +1,6 @@
 description: example-shell-determined-demo1
 resources:
   devices: null
-  # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
-  resource_pool: CPU1
+  # Default CPU: CPUryzen | Default GPU: RTX_4080S | AMD CPUryzen CPUi9 RTX_4080S RTX_X090
+  resource_pool: CPUryzen
 

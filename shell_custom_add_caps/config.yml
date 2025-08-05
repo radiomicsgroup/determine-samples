@@ -16,12 +16,12 @@ environment:
     - DAC_READ_SEARCH
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.2.3
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.3
+    cpu: harbor.vhio.net/determine/custom_cpu:1.0.0.3
+    cuda: harbor.vhio.net/determine/custom_gpu:1.0.0.3
 resources:
   devices: null
-  # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
-  resource_pool: RTX_X090
+  # Default CPU: CPUryzen | Default GPU: RTX_4080S | AMD CPUryzen CPUi9 RTX_4080S RTX_X090
+  resource_pool: RTX_4080S
   slots: 1
   weight: 1
   shm_size: 4GiB

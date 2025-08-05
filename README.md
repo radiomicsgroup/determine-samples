@@ -104,7 +104,7 @@ pip install --upgrade determined
 
     Agent Task ID.
 
-- DET_AGENT_ID=Agent_i7_CPU_192.168.100.234_04
+- DET_AGENT_ID=Agent_i7_CPU_192.168.100.111_04
 
     Agent Id, in this case when a agent is setup the ID contains the IP address of the machine.
     This IP is internal to a local network
@@ -133,8 +133,6 @@ The custom images contains some extra commands and utilities like:
 - Earthly [https://earthly.dev/](https://earthly.dev/)
 - Advanced Normalization Tools (ANTs) [https://github.com/ANTsX/ANTs](https://github.com/ANTsX/ANTs)
 - more ....
-
-For More check CPU [dockerfile.cpu](./dockerfile.cpu) and GPU [dockerfile.gpu](./dockerfile.gpu) (**This dockerfile is for the latest image**)
 
 ## :memo: Templates
 
@@ -186,14 +184,26 @@ You can use all 'determinedai/environments/*' docker images but is prefer to use
 ```bash
    Custom Images
 
- - harbor.vhio.net/desktop:0.0.1
+ - harbor.vhio.net/desktop:1.0.0.1
 
  - harbor.vhio.net/determine/srtools:0.24.5
 
- - harbor.vhio.net/determine/custom_cpu:0.24.2.2
- - harbor.vhio.net/determine/custom_cpu:0.24.2.3
+ - harbor.vhio.net/determine/custom_cpu:1.0.0.2
+ - harbor.vhio.net/determine/custom_cpu:1.0.0.3
 
- - harbor.vhio.net/determine/custom_gpu:0.24.2.2
- - harbor.vhio.net/determine/custom_gpu:0.24.2.3
+ - harbor.vhio.net/determine/custom_gpu:1.0.0.2
+ - harbor.vhio.net/determine/custom_gpu:1.0.0.3
+
 
 ```
+
+## :shell: Custom Resource Pools
+
+- Default CPU: CPUryzen
+- Default GPU: RTX_4080S
+- All:
+    - AMD (Merge AMD64 and AMD128)
+    - CPUryzen
+    - CPUi9
+    - RTX_4080S
+    - RTX_X090

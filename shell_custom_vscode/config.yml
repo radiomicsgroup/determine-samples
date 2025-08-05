@@ -20,8 +20,8 @@ environment:
     - HOMECONFIG=/nfs/home
   force_pull_image: false
   image:
-    cpu: harbor.vhio.net/determine/custom_cpu:0.24.2.3
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.3
+    cpu: harbor.vhio.net/determine/custom_cpu:0.24.2.4
+    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.4
   pod_spec: null
   ports: null
   proxy_ports:
@@ -30,8 +30,8 @@ environment:
       unauthenticated: true
 resources:
   devices: null
-  # Default CPU: CPU | Default GPU: GPU | AMD CPU AMD
-  resource_pool: CPU1
+  # Default CPU: CPUryzen | Default GPU: RTX_4080S | AMD CPUryzen CPUi9 RTX_4080S RTX_X090
+  resource_pool: CPUryzen
   slots: 1
   weight: 1
   shm_size: 4GiB

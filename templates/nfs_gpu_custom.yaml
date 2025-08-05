@@ -6,4 +6,4 @@ bind_mounts:
 environment:
   force_pull_image: false
   image:
-    cuda: harbor.vhio.net/determine/custom_gpu:0.24.2.3
+    cuda: harbor.vhio.net/determine/custom_gpu:1.0.0.3
